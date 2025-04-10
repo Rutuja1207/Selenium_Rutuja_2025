@@ -54,11 +54,12 @@ public class Base_Test {
 	public void beforeClass() throws IOException {
 		System.out.println("@BeforeClass");
 		
-		String Browser=fileUtility.readDataFromPropertyFile("browserName");
-		String url=fileUtility.readDataFromPropertyFile("url");
+		//String Browser=fileUtility.readDataFromPropertyFile("browserName");
+		//String url=fileUtility.readDataFromPropertyFile("url");
 		
-		//String Browser=System.getProperty("Browser");
-		//String url=System.getProperty("url");
+		String Browser=System.getProperty("Browser");
+		String url=System.getProperty("url");
+		
 		if(Browser.contains("chrome")) {
 			driver=new ChromeDriver();
 		}else if(Browser.contains("edge")) {
